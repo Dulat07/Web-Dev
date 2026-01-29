@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #fff;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.left {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.bd {
+    background: linear-gradient(to right, #ff6600, #f60063, #ae2bf4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.mockup {
+    width: 500px;
+    max-width: 90%;
+}
+
+/* ===== divider ===== */
+.divider {
+    width: 2px;
+    background: #ddd;
+}
+
+/* ===== right ===== */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== form ===== */
+.formblock {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.input::placeholder {
+    color: #8e8e8e;
+}
+
+.button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 999px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.primary {
+    background: #4c8df6;
+    color: #fff;
+}
+
+.link {
+    background: transparent;
+    color: #555;
+    transition: background 0.2s ease;
+}
+.link:hover {
+    background: #e7e7e7;
+}
+
+.facebook {
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.create {
+    background: #fff;
+    border: 1px solid #4c8df6;
+    color: #4c8df6;
+}
+
+/* ===== other ===== */
+.other {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meta {
+    margin-top: 20px;
+}
