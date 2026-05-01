@@ -1,0 +1,26 @@
+@if (album$ | async; as album) {
+  <section class="detail-card">
+    <div class="detail-header">
+      <div>
+        <span class="album-id">Album #{{ album.id }}</span>
+        <h1>{{ album.title }}</h1>
+        <p>Пользователь: {{ album.userId }}</p>
+      </div>
+
+      <a [routerLink]="['/albums', album.id, 'photos']" class="photos-link">View photos</a>
+    </div>
+
+    <div class="edit-panel">
+      <label for="title">Album title</label>
+      <input id="title" type="text" [(ngModel)]="editedTitle" />
+    </div>
+
+    <div class="action-row">
+      <button type="button" class="primary-button" (click)="saveAlbum(album)">Save</button>
+      <button type="button" class="danger-button" (click)="deleteAlbum(album.id)">Delete</button>
+      <a routerLink="/albums" class="ghost-link">Back to albums</a>
+    </div>
+  </section>
+} @else {
+  <div class="detail-card">Загрузка данных альбома...</div>
+}

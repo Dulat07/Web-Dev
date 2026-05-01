@@ -1,0 +1,27 @@
+<section class="albums-page">
+  <div class="page-header">
+    <div>
+      <h1>Albums</h1>
+      <p>Список альбомов загружается через `AlbumService` и выводится с помощью `async` pipe.</p>
+    </div>
+  </div>
+
+  @if (albums$ | async; as albums) {
+    <div class="album-grid">
+      @for (album of albums; track album.id) {
+        <article class="album-card">
+          <span class="album-id">Album #{{ album.id }}</span>
+          <h2>{{ album.title }}</h2>
+          <p>User ID: {{ album.userId }}</p>
+
+          <div class="album-actions">
+            <a [routerLink]="['/albums', album.id]">Details</a>
+            <a [routerLink]="['/albums', album.id, 'photos']">Photos</a>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <div class="empty-state">Загрузка альбомов...</div>
+  }
+</section>

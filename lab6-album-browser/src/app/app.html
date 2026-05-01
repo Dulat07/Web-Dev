@@ -1,0 +1,17 @@
+<div class="app-shell">
+  <header class="topbar">
+    <a routerLink="/" class="brand">Album Browser</a>
+
+    <nav class="topbar-nav" aria-label="Main navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+      <a routerLink="/albums" routerLinkActive="active">Albums</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <router-outlet />
+  </main>
+</div>

@@ -1,0 +1,29 @@
+<section class="photos-page">
+  <div class="page-header">
+    <div>
+      <span class="eyebrow">Photos</span>
+      @if (albumId$ | async; as albumId) {
+        <h1>Album #{{ albumId }}</h1>
+      }
+    </div>
+
+    @if (albumId$ | async; as albumId) {
+      <a [routerLink]="['/albums', albumId]" class="back-link">Back to detail</a>
+    }
+  </div>
+
+  @if (photos$ | async; as photos) {
+    <div class="photo-grid">
+      @for (photo of photos; track photo.id) {
+        <article class="photo-card">
+          <a [href]="photo.url" target="_blank" rel="noopener noreferrer">
+            <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+          </a>
+          <h2>{{ photo.title }}</h2>
+        </article>
+      }
+    </div>
+  } @else {
+    <div class="loading-card">Загрузка фотографий...</div>
+  }
+</section>
