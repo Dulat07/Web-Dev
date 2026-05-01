@@ -1,0 +1,135 @@
+body{
+            background-color: rgb(246, 246, 255);
+        }
+
+        .page {
+            display: flex;
+            align-items : center;
+            justify-content: center;
+            min-height: 90vh;
+            gap : 150px;
+        }
+        .facebook{
+            color: rgb(29, 89, 253);
+            font-size: 80px;
+            font-family: sans-serif;
+            font-weight: bold;
+            display : flex;
+            flex-direction: column; 
+        }
+        .text{
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            font-weight: normal;
+        }
+
+        .form{
+            display : flex;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            width : 100%;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+            gap : 20px;
+            align-items: center;
+
+        }
+        .input{
+            outline : none;
+            box-sizing: border-box;
+            font-size: 20px;
+
+            border-radius: 5px;
+            border: 1px solid rgb(204, 204, 204);
+
+            width: 100%;
+            padding: 14px;
+            
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+            transition : border-color 0.2s ease, box-shadow 0.2s ease;
+    
+            flex-direction: column;
+
+        }
+        .input::placeholder{
+            font-size: 20px;
+        }
+        .input:focus{
+            box-shadow: 0px 0px 10px 0px rgb(29, 89, 255);
+            border-color: rgb(29, 89, 253);
+        }
+        
+        .button{
+            width : 100%;
+            padding : 16px;
+
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+
+            border : none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            color: #fff;
+            background-color: #1877f2;
+
+            transition : background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .button:hover{
+            background-color: #166fe5;
+        }
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.3);
+            }
+        .button:active{
+            background-color: #145dbf;
+        }
+        .frgt{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color : #2e84f5;
+            text-align: center;
+
+        }
+        .divider {
+            border: none;
+            height: 2px;
+            background-color: #ddd;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .acc{
+            font-weight: normal;
+            background-color: rgb(0, 186, 22);
+            width: 60%;
+        }
+
+        .acc:hover{
+            background-color: rgb(0, 167, 0);
+        }
+        .acc:active{
+            background-color: rgb(0, 141, 0);
+        }
+        span{
+            font-weight: bold;
+        }
+        .asd {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .asd span {
+            font-weight: bold;
+        }
