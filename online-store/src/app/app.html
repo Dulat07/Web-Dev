@@ -1,0 +1,29 @@
+<header class="topbar">
+  <div class="brand">
+    <div class="header" aria-hidden="true"><img src="kaspi.png" class = "logo"></div>
+    <div class="brand-text">
+      <h1>Kaspi.kz</h1>
+      <span>Online Store</span>
+    </div>
+  </div>
+</header>
+
+<div class="categories">
+  <button
+    *ngFor="let category of categories"
+    (click)="selectCategory(category.id)"
+    [class.active]="selectedCategoryId === category.id">
+    {{ category.name }}
+  </button>
+</div>
+
+<div *ngIf="selectedCategoryId; else noSelection">
+  <app-product-list
+    [products]="filteredProducts"
+    (delete)="removeProduct($event)">
+  </app-product-list>
+</div>
+
+<ng-template #noSelection>
+  <p>Please select a category</p>
+</ng-template>

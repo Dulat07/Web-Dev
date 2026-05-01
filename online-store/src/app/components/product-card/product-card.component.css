@@ -1,0 +1,154 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.image-container img,
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #555555;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.gallery-button-left {
+  left: 10px;
+}
+
+.gallery-button-right {
+  right: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #212121;
+}
+
+.description {
+  margin: 0;
+  min-height: 44px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 22px;
+  color: #212121;
+}
+
+.rating,
+.likes {
+  color: #757575;
+  font-size: 14px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: auto;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.96;
+}
+
+.secondary {
+  background: #fff5f5;
+  color: #ff4d4f;
+  border-color: #ffd6d6;
+}
+
+.danger {
+  background: #ffffff;
+  color: #d32f2f;
+  border-color: #ffcdd2;
+}
+
+.danger:hover {
+  background: #fff5f5;
+  color: #d32f2f;
+}
+
+.product-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #ff4d4f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.product-link:hover {
+  background: #e53935;
+}

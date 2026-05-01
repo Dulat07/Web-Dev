@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="image-container">
+    <button
+      type="button"
+      class="gallery-button gallery-button-left"
+      (click)="showPreviousImage()"
+      aria-label="Previous image">
+      ‹
+    </button>
+
+    <img [src]="currentImage" [alt]="product.name" />
+
+    <button
+      type="button"
+      class="gallery-button gallery-button-right"
+      (click)="showNextImage()"
+      aria-label="Next image">
+      ›
+    </button>
+  </div>
+
+  <div class="card-content">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+
+    <div class="meta-row">
+      <span class="price">{{ product.price | number }} ₸</span>
+      <span class="rating">⭐ {{ product.rating }}</span>
+    </div>
+
+    <div class="likes">❤ {{ product.likes }}</div>
+
+    <div class="actions">
+      <button class="secondary" (click)="like()">Like</button>
+      <button class="danger" (click)="deleteProduct()">Delete</button>
+    </div>
+
+    <a class="product-link" [href]="product.link" target="_blank" rel="noopener noreferrer">
+      Open product
+    </a>
+  </div>
+</div>
